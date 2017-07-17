@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/login" method="POST">
+    <fieldset>
+        <input type="text" name="email" placeholder="E-mail" value="{{ request.email }}">
+        <input type="password" name="password" placeholder="Password" value="{{ request.password }}">
+        <input type="checkbox" name="remember_me"> Remember
+        <button type="submit">Login</button>
+    </fieldset>
+</form>
+
+{% endblock  %}
